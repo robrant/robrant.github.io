@@ -20,10 +20,10 @@ attach it to my Raspberry Pi (B+).
 
 <div class='image aside'>
   <img src='/images/gps_penny_scale.png'>
-  The GP-20U7 and a Penny.
+  _The GP-20U7 and a Penny._
 </div>
 
-I pretty much followed [this post](https://nationpigeon.com/gps-raspberrypi/)
+I pretty much followed [this post][nationpigeon].
 word for word because my GPIO/UART/Serial knowledge was non-existent at the time.
 It didn’t quite work for me because there have been Raspbian OS changes since
 that post. I thought I’d capture how I got it to work and a list of things that
@@ -37,15 +37,16 @@ might help others debug any problems.
 
 ## Hardware
 
-Disconnect your Pi from the power.
+* Disconnect your Pi from the power.
 
-I fitted 3 Male-Female jumper wires to the GPS, picking colours to match those
+* I fitted 3 Male-Female jumper wires to the GPS, picking colours to match those
 on the GPS to save confusing my little brain. Extending the leads allowed me to
 connect the cables to pins distributed over the GPIO header without breaking up
 the 3-pin female end point provided with the GPS.
 
 *   I fitted the female ends of the jumper wires to pins 1, 6 and 10 of the
 Raspberry Pi. Here’s the mapping between GPS cables and Pi pin numbers and names.
+
 
 | Pi  | Pi Pin # | Pi Pin Name        | GPS |
 |-----|----------|--------------------|-----|
@@ -55,18 +56,19 @@ Raspberry Pi. Here’s the mapping between GPS cables and Pi pin numbers and nam
 
 <div class='image aside'>
   <img src='/images/gps_extension_jumpers.jpg'>
-  GPS wiring on the GPIO
+  _GPS wiring on the GPIO_
 </div>
+
 
 <div class='image aside'>
   <img src='/images/gps_gpio_pins.jpg'>
-  GPS GPIO Pin Configuration
+  _GPS GPIO Pin Configuration_
 </div>
+
 
 * Move the GPS next to a window with good sight of the sky.
 
 * Power on the Pi.
-
 
 ## What Worked For Me:
 
@@ -188,8 +190,5 @@ comes with the `gpsd-clients`. It’s called `xgps`.
   CGPS Successful Readout
 </div>
 
-[gps_penny]:
-[pi-setup-repo]: https://github.com/robrant/pi-setup
-[gps_cabling_pi]:
-[gps_cabling_connectors]:
-[cgps_successful_readout]:
+[pi-setup-repo]:https://github.com/robrant/pi-setup
+[nationpigeon]:https://nationpigeon.com/gps-raspberrypi/
