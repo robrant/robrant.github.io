@@ -1,0 +1,19 @@
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav class="site-nav">
+      <ul id='categories'>
+        {% for archive in site.archives %}
+          {% if archive.type == "category" %}
+            <li><a href="{{ archive.url }}">{{ archive.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </div>
+
+</header>

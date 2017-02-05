@@ -1,1 +1,47 @@
-theme: jekyll-theme-midnight
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Lighthouse Project Journal
+email: roo@digi2al.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+  This blog is for Lighthouse.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://lighthouse-project-journal.herokuapp.com/" # the base hostname & protocol for your site
+twitter_username: digi2al
+github_username:  digi2al
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+gems:
+  - jekyll-archives
+
+permalink: /:year/:month/:title/
+
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+    - year
+    - month
+  layouts:
+      tag: tag_index
+      category: tag_index
+      year: tag_index
+      month: tag_index
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tagged/:name/'
+    category: '/categorised/:name/'
+
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
