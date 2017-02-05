@@ -1,22 +1,25 @@
 ---
 layout: post
-title: "Adding authorisation to the lighthouse API"
-date: 2016-04-06 15:30
-categories: future
+title: "Raspberry Pi and GPS"
+date: 2017-02-06 15:30
+categories: Raspberry Pi, GPS
 tags:
-    - future enhancements
-author: "Mark Norman Francis"
+    - Rasberry Pi
+    - GPS
+    - Peripherals
+    - Jessie
+author: "Rich Brantingham"
 ---
 
 A very basic example of how to provide an API for lighthouse features was
 added in [pull request #91][pr91]. As the PR (and the documentation added
-later in [pull request #127][pr127]) notes, this API provides no 
+later in [pull request #127][pr127]) notes, this API provides no
 authentication.
 
 If authorisation was needed in the future, here are some broad strategies to
 consider:
 
- 1. Add a randomly generated token to the `Link` model upon creation, and 
+ 1. Add a randomly generated token to the `Link` model upon creation, and
     insist this is passed in an HTTP header with every request.
 
  1. Replace the current code and start using the Django [REST
