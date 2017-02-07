@@ -27,8 +27,8 @@ attach it to my Raspberry Pi (B+).
 I pretty much followed [this nationpigeon post][nationpigeon].
 word for word because my GPIO/UART/Serial knowledge was non-existent at the time.
 It didn’t quite work for me because there have been Raspbian OS changes since
-that post. So, usual story - I thought I’d capture how I got it to work and a
-list of things that might help others debug any problems they encounter.
+that post. So, usual story - I thought I’d capture how I got it to work and in a
+later post, a list of things that might help others debug any problems they encounter.
 
 ## My Setup:
 
