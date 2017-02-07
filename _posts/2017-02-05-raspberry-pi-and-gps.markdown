@@ -197,7 +197,6 @@ It’s called `xgps`.
   <figcaption>Figure 4. CGPS Successful Readout</figcaption>
 
 </div>
-</br>
 
 [pi-setup-repo]:https://github.com/robrant/pi-setup
 [nationpigeon]:https://nationpigeon.com/gps-raspberrypi/
