@@ -18,11 +18,10 @@ create an ocean current tracker and/or real-time open water swim tracker.
 I haven’t got round to that yet, but I did have the time and inclination to
 attach it to my Raspberry Pi (B+).
 
-<div class='image aside'>
+<div class='image'>
   <img src='/images/gps_penny_scale.png'>
-  _Figure 1. The GP-20U7 and a Penny._
+  <figcaption>Figure 1. The GP-20U7 and a Penny.</figcaption>
 </div>
-</br>
 
 
 I pretty much followed [this nationpigeon post][nationpigeon].
@@ -66,13 +65,11 @@ _Table 1. A mapping between GPS pins and Pi pins._
   <img src='/images/gps_extension_jumpers.png'>
   <figcaption>Figure 2. GPS Pins Extensions</figcaption>
 </div>
-</br>
 
 <div class='image'>
   <img src='/images/gps_pi_gpio_pins.png'>
   <figcaption>Figure 3. GPS GPIO Pin Configuration</figcaption>
 </div>
-</br>
 
 
 ## What Worked For Me
@@ -195,9 +192,10 @@ Figure 4 shows what the output looks like. As mentioned in the nationpigeon blog
 there is also a GUI if you’re running a desktop which comes with `gpsd-clients`.
 It’s called `xgps`.
 
-<div class='image aside'>
+<div class='image'>
   <img src='/images/gps_cgps_successful_readout.png'>
-  _Figure 4. CGPS Successful Readout_
+  <figcaption>Figure 4. CGPS Successful Readout</figcaption>
+
 </div>
 </br>
 
