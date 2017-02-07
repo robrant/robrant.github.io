@@ -6,14 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Lighthouse Project Journal
-email: roo@digi2al.co.uk
+title: Robrant Blog
+email: rich.brantingham
 description: > # this means to ignore newlines until "baseurl:"
-  This blog is for Lighthouse.
+  Tech things worth keeping outside of my brain.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lighthouse-project-journal.herokuapp.com/" # the base hostname & protocol for your site
-twitter_username: digi2al
-github_username:  digi2al
+#url: "http://lighthouse-project-journal.herokuapp.com/" # the base hostname & protocol for your site
+twitter_username: brantinr
+github_username:  robrant
 
 # Build settings
 markdown: kramdown
