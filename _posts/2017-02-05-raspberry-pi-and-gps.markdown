@@ -59,17 +59,18 @@ which Pi pin numbers and names and a couple of photos for good measure.
 | GND | Pin 6    | Ground             | GND |
 | RX  | Pin 10   | GPIO15 / UART0_RXD | TX  |
 | 3V  | Pin 1    | 3V3 / Power        | VCC |
+
 _Table 1. A mapping between GPS pins and Pi pins._
 
-<div class='image aside'>
+<div class='image'>
   <img src='/images/gps_extension_jumpers.png'>
-  _Figure 2. GPS wiring on the GPIO_
+  <figcaption>Figure 2. GPS Pins Extensions</figcaption>
 </div>
 </br>
 
-<div class='image aside'>
+<div class='image'>
   <img src='/images/gps_pi_gpio_pins.png'>
-  _Figure 3. GPS GPIO Pin Configuration_
+  <figcaption>Figure 3. GPS GPIO Pin Configuration</figcaption>
 </div>
 </br>
 
