@@ -124,6 +124,32 @@ further.
 
 * [What the hell is UART?][what_is_uart]
 
+## Update
+
+More recently (March 2017), I tried getting the gps + serial to work with a
+Raspberry Pi 3. I think I made hard work of it given that there are already some
+resources out there. The best thing I found was
+[this post on Element14][element14post], which has a comment in which explains
+the options clearly. I decided to go with their option 1. Based on that, this is
+what I did:
+
+* Comment out the `enable_uart=true`. It will stop things working under this setup.
+* Still ensure the relevant part of `/boot/cmdline.txt` is removed.
+* Uncomment or add this line to `/boot/config.txt`, which will disable your bluetooth.
+If you don't want to disable your bluetooth, then read the options in
+the [Element14 post][element14post] above.
+```
+dtoverlay=pi3-disable-bt
+```
+* Your firewall probably won't make any difference; it's a localhost connection
+which is invariably left alone by firewalls. I looked at it just in case.
+* Use `ls -al /dev` to get a feel for what devices are being symbolically linked.
+This was useful in seeing `serial0 --> ttyAMA0` and `serial1 --> ttyS0`.
+* I used `sudo cat serial0` and `sudo cat serial1` to work out which
+one was streaming GPS data.
+* I used this to determine which serial value to put in `/etc/default/gpsd`.
+* GPS still needs to see the sky; things haven't moved on much in 2 months.
+
 
 [pi_gps_part1]: https://robrant.github.io/2017/02/raspberry-pi-and-gps/
 [rambling_blog]: https://www.raspberrypi.org/forums/viewtopic.php?f=45&t=18115
@@ -133,3 +159,4 @@ further.
 [pi3_info1]: http://raspberrypi.stackexchange.com/questions/45570/how-do-i-make-serial-work-on-the-raspberry-pi3
 [pi3_info2]: https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi/using-uart-instead-of-usb
 [pi3_serial_changes]: https://www.element14.com/community/thread/55627/l/how-to-use-serial-port-in-raspberry-pi-3?displayFullThread=true
+[element14post]: https://www.element14.com/community/message/195438/l/re-raspberry-pi-3-und-enocean-pi-kompatibilitätsproblem#195438
